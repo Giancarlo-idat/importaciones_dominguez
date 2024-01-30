@@ -1,0 +1,57 @@
+@use '../base/' as *;
+
+.header {
+    width: 100%;
+    background-color: $header-bg;
+    overflow: hidden;
+
+    &__container {
+        width: 87.5rem;
+        max-width: 100%;
+        @include flex(row, nowrap, space-between, center);
+        padding: 0 15px;
+        margin: 10px auto;
+    }
+
+    &__logo {
+        flex: 1;
+        margin-left: 1.2rem;
+        cursor: pointer;
+
+        img {
+            width: 12.5rem;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        flex: 1;
+        @include flex(row, nowrap, flex-end, center);
+        gap: 1.5rem;
+
+        &-container {
+            position: relative;
+
+            svg {
+                color: $white;
+            }
+
+            .badge {
+                @include flex(row, nowrap, center, center);
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: $white;
+                color: $black;
+                padding: 0.25rem 0.5rem;
+                width: 1.25rem;
+                height: 1.25rem;
+                border-radius: 50%;
+                font-weight: bold;
+                font-size: 0.8rem;
+                left: 1rem;
+            }
+        }
+    }
+
+}

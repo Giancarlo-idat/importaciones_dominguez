@@ -1,0 +1,27 @@
+.carousel {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+
+    &-container {
+        flex: 1;
+
+        img {
+            height: 100%;
+            border-radius: 20px;
+            object-fit: contain;
+        }
+    }
+
+    &-static {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: .5rem;
+
+        img {
+            height: 100%;
+            border-radius: 20px;
+        }
+    }
+}
